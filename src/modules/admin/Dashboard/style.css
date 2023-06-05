@@ -1,0 +1,43 @@
+.header {
+    background-color: white;
+    position: relative;
+    height: 3.25rem;
+    border-radius: 0 0 30px 30px;
+    border-style: solid;
+    border-color: rgb(211, 218, 222);
+    border-width: 1px;
+}
+
+.header-title {    
+    position: absolute;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
+    top: 0;
+    left: 10px;
+}
+
+.adminNavigate {
+    position: absolute;
+    left: 89%;
+}
+
+.bloglist-container {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.dashboard-header {
+    margin-left: 3rem;
+    font-size: 32px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.add-list-buttons {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.p-button.p-component.list-blog-button {
+    margin-left: 5px;
+}

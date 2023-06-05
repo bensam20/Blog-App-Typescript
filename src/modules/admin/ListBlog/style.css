@@ -1,0 +1,11 @@
+.blog-list-title {
+    margin: 3rem;
+    margin-bottom: 10px;
+    font-size: 32px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.blog-list-container {
+    margin-left: 3rem;
+}

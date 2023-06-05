@@ -1,0 +1,29 @@
+.header {
+    background-color: white;
+    position: relative;
+    height: 3.25rem;
+}
+
+.header-title {
+    position: absolute;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
+    margin-left: 1rem;
+}
+
+.adminNavigate {
+    position: absolute;
+    left: 89%;
+}
+
+.bloglist-container {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.dashboard-header {
+    margin-left: 3rem;
+    font-size: 32px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
