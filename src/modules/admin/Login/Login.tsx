@@ -25,12 +25,15 @@ function Login() {
 
         if(authContext?.authData.id === username && authContext?.authData.password === password) {
           showToast("success", "Login Success", "Success");
+          authContext?.setIsLoggedIn(true);
+          localStorage.setItem("isLoggedIn", "true");
           setTimeout(() => {
             setLoading(false);
             navigate("/admin/dashboard");
           },1000);
         } else {
           showToast("error", "Incorrect Credentials", "Error");
+          authContext?.setIsLoggedIn(false);
           setTimeout(() => {
             setLoading(false);
           },1000);

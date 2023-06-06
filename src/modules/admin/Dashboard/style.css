@@ -41,3 +41,13 @@
 .p-button.p-component.list-blog-button {
     margin-left: 5px;
 }
+
+.blog-card {
+    width: 50rem;
+    height: 25rem;
+    margin-bottom: 20px;
+}
+
+.blog-card:hover {
+    cursor: pointer;
+}

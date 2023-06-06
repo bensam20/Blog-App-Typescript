@@ -8,7 +8,7 @@ function Header() {
   return (
     <>
         <div className='header'>
-            <div className='header-title'>BlogApp</div>
+            <div className='header-title' onClick={()=>navigate('/dashboard')}>BlogApp</div>
             <Button className='adminNavigate' link label="Sign in as Admin" onClick={()=>navigate("/admin/login")}/>
         </div>
     </>

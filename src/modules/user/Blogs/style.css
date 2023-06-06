@@ -11,6 +11,10 @@
     margin-left: 1rem;
 }
 
+.header-title:hover {
+    cursor: pointer;
+}
+
 .adminNavigate {
     position: absolute;
     left: 89%;
@@ -26,4 +30,14 @@
     font-size: 32px;
     margin-top: 1rem;
     font-weight: bold;
+}
+
+.blog-card {
+    width: 50rem;
+    height: 25rem;
+    margin-bottom: 20px;
+}
+
+.blog-card:hover {
+    cursor: pointer;
 }

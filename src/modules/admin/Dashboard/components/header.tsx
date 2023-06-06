@@ -5,11 +5,15 @@ import '../style.css';
 
 function Header() {
   const navigate = useNavigate();
+  const logout = () => {
+    localStorage.setItem("isLoggedIn", "");
+    navigate("/");
+  }
   return (
     <>
         <div className='header'>
-            <div className='header-title'>BlogApp</div>
-            <Button className='adminNavigate' link label="Logout" onClick={()=>navigate("/")}/>
+            <div className='header-title' onClick={()=>navigate('/admin/dashboard')}>BlogApp</div>
+            <Button className='adminNavigate' link label="Logout" onClick={logout}/>
         </div>
     </>
   )

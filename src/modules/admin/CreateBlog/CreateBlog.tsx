@@ -44,7 +44,7 @@ function CreateBlog() {
       <Card className='create-blog-form'>
         <span className="p-float-label">
           <InputText id="title" aria-describedby="username-help" value={blogContext?.title} onChange={(e) => blogContext?.setTitle(e.target.value)} />
-          <label htmlFor="title">Username</label>
+          <label htmlFor="title">Title</label>
         </span>
         <span className="p-float-label">
           <InputText id="author" aria-describedby="username-help" value={blogContext?.author} onChange={(e) => blogContext?.setAuthor(e.target.value)} />

@@ -1,6 +1,6 @@
 import { createContext, useMemo, useState, useEffect } from 'react';
 
-type Blog = {
+export type Blog = {
     author: string;
     title: string;
     text: string;
@@ -26,6 +26,8 @@ interface blogProps {
     editIndex: number;
     setEditIndex: React.Dispatch<React.SetStateAction<number>>;
     editBlog: Function;
+    selectedBlog: Blog;
+    setSelectedBlog: React.Dispatch<React.SetStateAction<Blog>>;
 }
 
 export const BlogContext = createContext<blogProps | null>(null);
@@ -33,13 +35,14 @@ export const BlogContext = createContext<blogProps | null>(null);
 function BlogDataContext(props:any) {
     const getItems = localStorage.getItem('blogs');
     const [blogs, setBlogs] = useState<Blog[] | []>(getItems ? JSON.parse(getItems) : []);
-    const [title, setTitle] = useState<string>();
-    const [author, setAuthor] = useState<string>();
-    const [imageLink, setImageLink] = useState<string>();
+    const [title, setTitle] = useState<string>("");
+    const [author, setAuthor] = useState<string>("");
+    const [imageLink, setImageLink] = useState<string>("");
     const [content, setContent] = useState<string>();
     const [isEdit, setIsEdit] = useState<boolean>(false);
     const [blogToEdit, setBlogToEdit] = useState<Blog>();
     const [editIndex, setEditIndex] = useState<number>(-1);
+    const [selectedBlog, setSelectedBlog] = useState<Blog>();
 
     useEffect(() => {
         localStorage.setItem('blogs', JSON.stringify(blogs));
@@ -79,7 +82,9 @@ function BlogDataContext(props:any) {
             setBlogToEdit,
             editIndex,
             setEditIndex,
-            editBlog
+            editBlog,
+            selectedBlog, 
+            setSelectedBlog
         }),
         [
             blogs,
@@ -89,7 +94,8 @@ function BlogDataContext(props:any) {
             content,
             isEdit,
             blogToEdit,
-            editIndex
+            editIndex,
+            selectedBlog
         ]
     )
 
