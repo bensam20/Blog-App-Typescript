@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import './style.css'
 import { BlogContext } from '../../../context/BlogContext';
 import { Toast } from 'primereact/toast';
+import { postReq, getAllReq } from '../../../api/apicall';
 
 function CreateBlog() {
   const blogContext = useContext(BlogContext);
@@ -27,6 +28,10 @@ function CreateBlog() {
         image: blogContext?.imageLink || '',
         text: blogContext?.content || '',
       }
+      postReq('/blog', newBlog);
+      console.log("inside bloglist", getAllReq('/blog'));
+      
+      // blogContext?.setBlogs(getAllReq('/blog'));
       blogContext?.setBlogs([...blogContext?.blogs, newBlog]);
       blogContext?.setTitle("");
       blogContext?.setAuthor("");
