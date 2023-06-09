@@ -1,4 +1,5 @@
 import { createContext, useMemo, useState, useEffect } from 'react';
+import { getAllReq } from '../api/apicall';
 
 export type Blog = {
     author: string;
@@ -34,7 +35,8 @@ export const BlogContext = createContext<blogProps | null>(null);
 
 function BlogDataContext(props:any) {
     const getItems = localStorage.getItem('blogs');
-    const [blogs, setBlogs] = useState<Blog[] | []>(getItems ? JSON.parse(getItems) : []);
+    const [blogs, setBlogs] = useState<Blog[] | []>(getAllReq('/blog'));
+    // const [blogs, setBlogs] = useState<Blog[] | []>(getItems ? JSON.parse(getItems) : []);
     const [title, setTitle] = useState<string>("");
     const [author, setAuthor] = useState<string>("");
     const [imageLink, setImageLink] = useState<string>("");
